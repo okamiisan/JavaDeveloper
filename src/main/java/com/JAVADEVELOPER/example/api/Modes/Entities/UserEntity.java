@@ -11,12 +11,11 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "users")
-
 public class UserEntity {
 
     @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
-    @Column (name = "id", columnDefinition = "INT UNSIGNED")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", columnDefinition = "INT UNSIGNED")
     private Integer id;
 
     @Column(name = "nombre", columnDefinition = "VARCHAR(100)")
@@ -28,6 +27,7 @@ public class UserEntity {
     @Column(name = "email", columnDefinition = "VARCHAR(150)")
     private String email;
 
-    @Column(name = "password", columnDefinition = "VARCHAR(100)")
+    @Column(name = "contraseña", columnDefinition = "VARCHAR(100)")
     private String password;
+
 }

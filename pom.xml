@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.folcademy</groupId>
-	<artifactId>example-api</artifactId>
+	<artifactId>api_EXAMPLE</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>example-api</name>
 	<description>Demo project for Spring Boot</description>

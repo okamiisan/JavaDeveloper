@@ -1,7 +1,7 @@
 package com.JAVADEVELOPER.example.api.Modes.Mappers;
 
-import com.JAVADEVELOPER.example.api.Modes.Domain.UserAddDTO;
-import com.JAVADEVELOPER.example.api.Modes.Domain.UserReadDTO;
+import com.JAVADEVELOPER.example.api.Modes.Dtos.UserAddDTO;
+import com.JAVADEVELOPER.example.api.Modes.Dtos.UserReadDTO;
 import com.JAVADEVELOPER.example.api.Modes.Entities.UserEntity;
 import org.springframework.stereotype.Component;
 
