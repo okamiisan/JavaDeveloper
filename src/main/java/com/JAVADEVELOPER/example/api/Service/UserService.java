@@ -18,6 +18,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
+
 public class UserService {
     private final UserRepository userRepository;
     private final UserMapper userMapper;

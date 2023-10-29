@@ -3,9 +3,11 @@ package com.JAVADEVELOPER.example.api.Controllers;
 import com.JAVADEVELOPER.example.api.Modes.Dtos.UserAddDTO;
 import com.JAVADEVELOPER.example.api.Modes.Dtos.UserEditDTO;
 import com.JAVADEVELOPER.example.api.Modes.Dtos.UserReadDTO;
-import org.springframework.http.ResponseEntity;
 import com.JAVADEVELOPER.example.api.Service.UserService;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+
 import java.util.List;
 
 @RestController
@@ -17,29 +19,29 @@ public class UserController {
     public UserController(UserService userService) {
         this.userService = userService;
     }
+
     @GetMapping
-    public ResponseEntity<List<UserReadDTO>> findAllUsers(){
+    public ResponseEntity<List<UserReadDTO> > findAllUsers() {
         return ResponseEntity.ok(userService.findAll());
     }
+
     @GetMapping("/{userId}")
-    public ResponseEntity<UserReadDTO> findById(@PathVariable Integer userId) {
+    public ResponseEntity<UserReadDTO> findById (@PathVariable Integer userId) {
         return ResponseEntity.ok(userService.findById(userId));
     }
+
     @PostMapping
-    public ResponseEntity<UserReadDTO> add(@RequestBody UserAddDTO userAddDTO){
+    public ResponseEntity<UserReadDTO> add(@RequestBody UserAddDTO userAddDTO) {
         return ResponseEntity.ok(userService.add(userAddDTO));
     }
+
     @DeleteMapping("/{userId}")
     public ResponseEntity<UserReadDTO> deleteById(@PathVariable Integer userId) {
         return ResponseEntity.ok(userService.deleteById(userId));
     }
 
     @PutMapping("/{userId}")
-    public ResponseEntity<UserReadDTO> edit(
-            @PathVariable Integer userId,
-            @RequestBody UserEditDTO user
-    ) {
+    public ResponseEntity<UserReadDTO> edit(@PathVariable Integer userId, @RequestBody UserEditDTO user) {
         return ResponseEntity.ok(userService.edit(userId, user));
     }
-
 }
